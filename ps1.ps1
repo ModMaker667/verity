@@ -1,8 +1,8 @@
-# p.ps1 - downloads the mp3 to temp and loops it at max volume
-$u = 'https://your-host/s.mp3'
+# ps1.ps1 — downloads the mp3 to temp and loops it at max volume
+$u = 'https://raw.githubusercontent.com/ModMaker667/verity/refs/heads/main/Verity-2026-10-29-20-50-THIS-STUDENT-RIGHT-FUCKING-HERE-IS-ABSOFUCKINGLU.mp3'
 $f = Join-Path $env:TEMP 's.mp3'
 try {
-    Invoke-WebRequest -Uri $u -OutFile $f -UseBasicParsing -TimeoutSec 20
+    Invoke-WebRequest -Uri $u -OutFile $f -UseBasicParsing -TimeoutSec 30
 } catch {
     # fallback: loud generated siren if download failed
     while (1) { [console]::beep(1200, 200); [console]::beep(800, 200) }
